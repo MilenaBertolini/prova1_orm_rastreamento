@@ -5,7 +5,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Optional;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -44,7 +43,7 @@ public class Pacote {
     private List<Rastreamento> rastreamentos = new ArrayList<>();
 
 
-    public void atualizarStatus(String novoStatus, Date dataHora, Optional<String> localizacao){
+    public void atualizarStatus(String novoStatus, Date dataHora, String localizacao){
 
         this.status = novoStatus;
 

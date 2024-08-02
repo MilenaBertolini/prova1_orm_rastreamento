@@ -1,6 +1,7 @@
 package prova.rastreamento.entrega.service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -30,8 +31,9 @@ public class PacoteService {
             Pacote pacoteExistente = existePacote.get();
 
             pacoteExistente.setDestinatario(pacote.getDestinatario());
-            pacoteExistente.setStatus(pacote.getStatus());
             pacoteExistente.setEndereco(pacote.getEndereco());
+            // pacoteExistente.setStatus(pacote.getStatus());
+            pacoteExistente.atualizarStatus(pacote.getStatus(), new Date(), null);
 
             return pacoteRepository.save(pacoteExistente);
         }

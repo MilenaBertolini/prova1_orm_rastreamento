@@ -1,0 +1,155 @@
+###
+### Endereço
+###
+
+### Criar um novo endereço
+POST http://localhost:8080/enderecos HTTP/1.1
+Content-Type: application/json
+
+{
+        "rua": "Rua Brasil",
+        "numero": "32",
+        "cidade": "Uberlândia",
+        "estado": "Minas Gerais",
+        "cep": "123654789"
+
+}
+
+### Criar um outro endereço
+POST http://localhost:8080/enderecos HTTP/1.1
+Content-Type: application/json
+
+{
+        "rua": "Rua Testando",
+        "numero": "526",
+        "cidade": "Prata",
+        "estado": "Minas Gerais",
+        "cep": "12365802"
+
+}
+
+### Listar todos os endereços
+GET http://localhost:8080/enderecos HTTP/1.1
+
+
+### Criar um novo pacote
+POST http://localhost:8080/pacotes HTTP/1.1
+Content-Type: application/json
+
+{
+        "id": "123456pacote2",
+        "destinatário": "Maria Joaquina",
+        "status": "pendente",
+        "endereco": {
+            "id": 2
+        }
+
+}
+
+### Criar um novo pacote
+POST http://localhost:8080/pacotes HTTP/1.1
+Content-Type: application/json
+
+{
+        "id": "pacote1",
+        "destinatário": "João da Silva",
+        "status": "pendente",
+        "endereco": {
+            "id": 1
+        }
+
+}
+
+### Criar um novo pacote
+POST http://localhost:8080/pacotes HTTP/1.1
+Content-Type: application/json
+
+{
+        "id": "pacote2",
+        "destinatário": "Maria Joaquina",
+        "status": "em transito",
+        "endereco": {
+            "id": 2
+        }
+
+}
+
+### Criar um novo pacote
+POST http://localhost:8080/pacotes HTTP/1.1
+Content-Type: application/json
+
+{
+        "id": "pacote3",
+        "destinatário": "João da Silva",
+        "status": "em transito",
+        "endereco": {
+            "id": 1
+        }
+
+}
+
+### Criar um novo pacote
+POST http://localhost:8080/pacotes HTTP/1.1
+Content-Type: application/json
+
+{
+        "id": "pacote4",
+        "destinatário": "João da Silva",
+        "status": "entregue",
+        "endereco": {
+            "id": 1
+        }
+
+}
+
+### Atualizar pacote id 2
+PUT http://localhost:8080/pacotes/2 HTTP/1.1
+Content-Type: application/json
+
+{
+        "destinatário": "João da Silva",
+        "status": "em transito",
+        "endereco": {
+            "id": 1
+        }
+
+}
+
+### Atualizar pacote id 1
+PUT http://localhost:8080/pacotes/1 HTTP/1.1
+Content-Type: application/json
+
+{
+        "destinatário": "Maria Joaquina",
+        "status": "em transito",
+        "endereco": {
+            "id": 2
+        }
+
+}
+
+
+### Listar pacote de id 3
+GET http://localhost:8080/pacotes/3 HTTP/1.1
+
+### Listar todos os pacotes
+GET http://localhost:8080/pacotes HTTP/1.1
+
+
+### Deletar o pacote de id 4
+DELETE http://localhost:8080/pacotes/4 HTTP/1.1
+
+
+###
+### Rastreamento
+###
+
+### Get all rastreamentos para o pacote de id 1
+GET http://localhost:8080/rastreamentos/1
+
+### Get all rastreamentos para o pacote de id 2
+GET http://localhost:8080/rastreamentos/1
+
+###
+### Pacote
+###

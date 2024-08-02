@@ -3,7 +3,6 @@ package prova.rastreamento.entrega.model;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Optional;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -32,7 +31,7 @@ public class Rastreamento {
 
     private Date dataHora;
     private String status;
-    private Optional<String> localizacao;
+    private String localizacao;
 
     @ManyToOne
     private Pacote pacote;

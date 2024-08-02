@@ -10,21 +10,21 @@ import org.springframework.stereotype.Service;
 import prova.rastreamento.entrega.model.Pacote;
 import prova.rastreamento.entrega.model.Rastreamento;
 import prova.rastreamento.entrega.repository.PacoteRepository;
-import prova.rastreamento.entrega.repository.RastreamentoRepository;
+// import prova.rastreamento.entrega.repository.RastreamentoRepository;
 
 @Service
 public class RastreamentoService {
     
-    @Autowired
-    private RastreamentoRepository rastreamentoRepository;
+    // @Autowired
+    // private RastreamentoRepository rastreamentoRepository;
 
     @Autowired
     private PacoteRepository pacoteRepository;
 
-    public Rastreamento adicionaRastreamento(Rastreamento rastreamento){
+    // public Rastreamento adicionaRastreamento(Rastreamento rastreamento){
 
-        return rastreamentoRepository.save(rastreamento);
-    }
+    //     return rastreamentoRepository.save(rastreamento);
+    // }
 
     public List<Rastreamento> getRastreamentosByPacoteId(Long id){
 
